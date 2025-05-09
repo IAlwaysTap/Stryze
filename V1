@@ -1,3 +1,4 @@
+script_key="KEY HERE"; -- Key
 getgenv().Stryze = {
     ['CoreSettings'] = {
         ['ShowUpdates'] = false, -- Dont touch
