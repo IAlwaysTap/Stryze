@@ -1,0 +1,134 @@
+getgenv().Stryze = {
+    ['CoreSettings'] = {
+        ['ShowUpdates'] = false, -- Dont touch
+        ['ShowIntro'] = true,
+        ['Version'] = 'V1',
+        ['TargetingMode'] = 'Priority', -- Vision / Priority / Vision Target, Priority FOV
+    };
+
+    ['Hotkeys'] = {
+        ['AntiDesync'] = 'F',
+        ['SpeedBoost']  = 'H',
+        ['WalkSpeed']   = 'J',
+        ['AimToggle']   = 'Q',
+    };
+
+    ['Visuals'] = { -- FOV
+        ['Active']    = true,
+        ['Solid']     = false, -- Filled FOV
+        ['Opacity']   = 1, -- Transparency of FOV
+        ['Radius']    = 150, -- Amount of FOV
+        ['Hue']       = Color3.fromRGB(255, 255, 255), -- Color of FOV
+        ['Thickness'] = 1,
+    };
+
+    ['Engagement'] = { -- Silent Aim
+        ['HiddenAim'] = {
+            ['Mode'] = 'Blatant', -- Blatant/Legit
+            ['HitChance'] = 100, -- Only for Legit mode 1-100
+            ['BlatantSettings'] = { -- Only applies if mode = Blatant
+                ['InstantHit'] = true, -- Always hits shoots
+                ['PerfectPrediction'] = true, -- No prediction errors hits more shoots
+            },
+            ['LegitSettings'] = { -- Only applies if mode = Legit
+                ['RandomOffset'] = 5, -- Adds slight randomness 0-10 best for legit
+                ['PredictionError'] = 0.05, -- Small misses for the silent aim
+            },
+            ['HitZone']    = 'HumanoidRootPart',
+            ['LeadAmount'] = 0.129, -- Prediction
+            ['MovementComp'] = { -- Offsets
+                ['Active'] = true,
+                ['Jump'] = { ['Value'] = 0 },
+                ['Fall'] = { ['Value'] = 0 },
+            },
+            ['MultiHitZones'] = {
+                ['Active'] = false,
+                ['Zones']  = { 'Head'},
+            },
+        },
+
+        ['AutoAim'] = { -- AimAssist 
+            ['HitZone']       = 'Head',
+            ['LeadAmount']    = 0.129, -- Prediction
+            ['TrackingSpeed'] = 0.1, -- Smoothness
+            ['Aerial'] = { -- Air Prediction
+                ['HitZone']       = 'UpperTorso',
+                ['LeadAmount']    = 0.129,
+                ['TrackingSpeed'] = 0.1,
+            },
+            ['Randomizer'] = { -- Shake
+                ['Active']    = false,
+                ['Intensity'] = 5,
+            },
+            ['AutoUnlock'] = true, -- Auto unlocks the target
+        },
+    };
+
+    ['Features'] = {
+        ['DynamicLead'] = { -- PredictionAdjuster
+            ['Active']     = false,
+            ['SpeedLimit'] = 250,
+        },
+        ['SpeedBoost'] = { -- Macro boost
+            ['Active']    = true,
+            ['Method']    = 'Quantum', -- Basic / Advanced / Quantum
+            ['CycleRate'] = 0.065, -- Speed of the macro
+        },
+        ['WalkSpeed'] = {
+            ['Active'] = true,
+            ['Speed'] = 300,
+            ['JumpPower'] = 200,
+        },
+        ['NoJumpCooldown'] = {
+            ['Enabled'] = true,
+        },
+        ['Cosmetics'] = { -- Only works in hood customs credits to = blxxdmadeopphunt
+            ['SkinChanger'] = {
+                ['Enabled'] = false,
+                ['DoubleBarrel'] = 'Ascension',
+                ['Revolver'] = 'Ascension',
+                ['TacticalShotgun'] = 'Ascension',
+                ['SMG'] = 'Ascension',
+                ['Shotgun'] = 'Ascension',
+                ['Special'] = {
+                    ['Knife'] = '' -- Dont use is buggy
+                }
+            },
+            ['BulletChanger'] = {
+                ['DoubleBarrel'] = 'Beta',
+                ['Revolver'] = 'Beta',
+                ['Shotgun'] = 'Beta',
+                ['SMG'] = 'Beta'
+            },
+            ['Subscription'] = {
+                ['Enabled'] = false,
+                ['SubscriptionData'] = 16,
+                ['SubscriptionStreak'] = 53
+            }
+        }
+    };
+     ['AntiAim'] = { -- Anti Aim Viewer
+            ['Enabled'] = true,
+            ['Mode'] = 'Normal', -- Normal / Advanced
+            ['CustomPosition'] = Vector3.new(0, 0, 0)
+        },
+        ['AntiRecoil'] = {
+            ['Enabled'] = true,
+            ['Intensity'] = 1.0
+        },
+        ['AntiSit'] = {
+            ['Enabled'] = true
+    };
+
+    ['Safety'] = {
+        ['VisibilityCheck']   = false, -- Wall check
+        ['IgnoreStunned']     = false, -- KO check
+        ['StopOnTargetDeath'] = false, -- Target Knocked
+        ['StopOnLocalDeath']  = true, -- Wont lock in dead people
+        ['TypingCheck']       = true, -- Typing check
+        ['AntiDesync'] = { -- If a player has antilock it will resolve it. 
+            ['Active'] = false,
+            ['Alert']  = true,
+        },
+    };
+}
