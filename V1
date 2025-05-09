@@ -132,3 +132,5 @@ getgenv().Stryze = {
         },
     };
 }
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/49767f73301e4d49a4a2c61e83e63e6a.lua"))()
